@@ -34,7 +34,7 @@ SELECT * from rStore join lList as list on rStore.Store = list.Store where Regio
 
 This query will first set Region = 1, then output the following
 
-| Region  | Store | Levels | Store
+| Region  | Store | Levels | Store |
 | ------------- | ------------- |
 | 1  | Store 1  |  A  | Store 1  |
 | 1  | Store 2  |  A  | Store 2  |
