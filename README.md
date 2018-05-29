@@ -7,5 +7,13 @@ I found that you can nest select statements inside WHERE clauses, or as they are
 
 SQL Table
 
-| region | Store |
-_________________
+| Region  | Store |
+| ------------- | ------------- |
+| 1  | Store 1  |
+| 1  | Store 2  |
+| 1  | Store 3  |
+| 1  | Store 4  |
+| 2  | Store 5  |
+| 2  | Store 6  |
+| 2  | Store 7  |
+| 2  | Store 8  |
