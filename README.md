@@ -18,7 +18,7 @@ I found that you can nest select statements inside WHERE clauses, or as they are
 | 2  | Store 7  |
 | 2  | Store 8  |
 
-#### SQL Table: rStore
+#### SQL Table: lList
 | Levels | Store |
 | ------------- | ------------- |
 | A  | Store 1  |
@@ -31,5 +31,5 @@ I found that you can nest select statements inside WHERE clauses, or as they are
 | B  | Store 8  |
 
 ```sql
-SELECT * from rStore join levels_list as list on rStore.Store = list.Store where Region = (select Region from (select * from rStore where Store = '$area')ras) order by list.Store
+SELECT * from rStore join lList as list on rStore.Store = list.Store where Region = (select Region from (select * from rStore where Store = '$area')ras) order by list.Store
 ```
