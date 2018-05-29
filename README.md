@@ -1,6 +1,8 @@
 # Using subqueries (or Using a SELECT statement in a WHERE clause)
 
-This snippet came about because I needed to get all stores that matched certain region, when given only one store. Here I reference the same table to select a store to get its Region; then use the result of that query to SELECT all stores that had the same matching Region. I then use that to join another table to get the levels of that result.
+This snippet came about because I needed to get all stores that matched certain region, when given only one store. 
+
+Here I reference the rStore table to select a store to get its Region; then use the result of that query to SELECT all stores from rStore that have the same matching Region. I then use that to join another table to get the levels of that result.
 
 
 #### SQL Table: rStore
