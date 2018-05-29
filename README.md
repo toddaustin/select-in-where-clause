@@ -32,8 +32,10 @@ This snippet came about because I needed to reference the same table to select a
 SELECT * from rStore join lList as list on rStore.Store = list.Store where Region = (select Region from (select * from rStore where Store = 'Store 1')ras) order by list.Store
 ```
 
-This query will first set Region = 1, then output the following
-| Region  | Store | Levels | Store
+This query will first set Region = 1, then output the following  
+
+
+| Region  | Store | Levels | Store |
 | ------------- | ------------- | ------------- | ------------- |
 | 1  | Store 1  |  A  | Store 1  |
 | 1  | Store 2  |  A  | Store 2  |
