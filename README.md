@@ -5,7 +5,7 @@ This snippet came about because I needed to reference the same table to select a
 I found that you can nest select statements inside WHERE clauses, or as they are called, subqueries. I had not used them before.
 
 
-SQL Table
+#### SQL Table: rStore
 
 | Region  | Store |
 | ------------- | ------------- |
@@ -18,6 +18,17 @@ SQL Table
 | 2  | Store 7  |
 | 2  | Store 8  |
 
+#### SQL Table: rStore
+| Levels | Store |
+| ------------- | ------------- |
+| A  | Store 1  |
+| A  | Store 2  |
+| B  | Store 3  |
+| B  | Store 4  |
+| A  | Store 5  |
+| C  | Store 6  |
+| A  | Store 7  |
+| B  | Store 8  |
 
 ```sql
 SELECT * from rStore join levels_list as list on rStore.Store = list.Store where Region = (select Region from (select * from rStore where Store = '$area')ras) order by list.Store
