@@ -17,3 +17,8 @@ SQL Table
 | 2  | Store 6  |
 | 2  | Store 7  |
 | 2  | Store 8  |
+
+
+```sql
+SELECT * from rStore join levels_list as list on rStore.Store = list.Store where Region = (select Region from (select * from rStore where Store = '$area')ras) order by list.Store
+```
